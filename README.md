@@ -1,10 +1,13 @@
+# docker-fake-domain-proxy
 
+偽ドメインのサイトへプロクシ経由でアクセスできるようにします。
 
+# action.sh
 
-# Rebuild
+各種 Dockerのコマンドをまとめたものです。
 
-	docker stop dfp01 && \
-	docker rm dfp01 && \
-	docker build -t fake-domain-proxy . && \
-	docker run -d --name dfp01 -p 8888:8888 -v $(pwd)/data:/data fake-domain-proxy
+	$ ./action.sh run
+	$ ./action.sh purge
+	$ ./action.sh bash
+	$ ./action.sh supervisorctl
 
