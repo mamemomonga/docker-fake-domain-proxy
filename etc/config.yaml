@@ -1,0 +1,9 @@
+
+domains:
+  - { name: 'domain.dom',   addr: '192.168.0.1' }
+
+general:
+    container: kdp1
+    image: fake-domain-proxy
+    host_port: 8888
+

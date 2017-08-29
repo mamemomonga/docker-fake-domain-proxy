@@ -11,8 +11,7 @@ RUN set -xe && \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y tinyproxy dnsmasq supervisor && \
 	rm -rf /var/lib/apt/lists/*
 
-ADD root/etc /root/etc/
-ADD root/run.sh /root/run.sh
+ADD files/run.sh /root/run.sh
 
 EXPOSE 8888
 VOLUME ["/data"]
